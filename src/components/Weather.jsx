@@ -21,7 +21,7 @@ const Weather = () => {
         }catch(error){
             if(error.response.status === 400){
                 alert("Failed to fetch weather data");
-                setWeather({...weather , temp:""})
+                // setWeather({...weather , temp:""})
             }
             
         }
@@ -33,8 +33,8 @@ const Weather = () => {
 
             <input className= "search-bar" type="text" placeholder="Enter city name" onChange={(e) => {handleOnChange(e)}}></input>
             <button className="search-button" onClick={handleOnClick}>Search</button>
-            {isLoading ? <p style={{color:"green"}}>Loading data…</p> : () => {return;}}
-           {weather.temp && !isLoading ? <div className="weather-cards">
+            {isLoading ? <p style={{color:"green"}}>Loading data...</p> : () => {return;}}
+           {weather.temp ? <div className="weather-cards">
             <Card
             title={"Temperature"}
             info={weather.temp + "°C"}
