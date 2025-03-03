@@ -14,7 +14,7 @@ const Weather = () => {
         setIsLoading(true);
         try{
 
-        const response = await axios.get(`http://api.weatherapi.com/v1/current.json?key=3b0dc46b96e440fa95f64846250303&q=${input}`);
+        const response = await axios.get(`https://api.weatherapi.com/v1/current.json?key=3b0dc46b96e440fa95f64846250303&q=${input}`);
         // console.log(response.data.current.temp_c)
         setWeather({...weather, temp:response.data.current.temp_c , humidity:response.data.current.humidity , condition: response.data.current.condition.text, wind:response.data.current.wind_kph});
         console.log(weather);
