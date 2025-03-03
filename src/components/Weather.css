@@ -1,0 +1,25 @@
+.weather-cards{
+    margin-top: 70px;
+    display: flex;
+    
+}
+
+.search-bar{
+
+    width: 470px;
+    margin: 10px;
+    height: 50px;
+    font-size: 20px;
+    border-radius: 8px;
+    border: none;
+}
+
+.search-button{
+    height: 50px;
+    background-color: #4caf50;
+    border: none;
+    border-radius: 8px;
+    width: 90px;
+    font-size: 20px;
+    color: white;   
+}
