@@ -33,7 +33,7 @@ const Weather = () => {
 
             <input className= "search-bar" type="text" placeholder="Enter city name" onChange={(e) => {handleOnChange(e)}}></input>
             <button className="search-button" onClick={handleOnClick}>Search</button>
-            {isLoading ? <p style={{color:"green"}}>...Loading</p> : () => {return;}}
+            {isLoading ? <p style={{color:"green"}}>Loading data…</p> : () => {return;}}
            {weather.temp && !isLoading ? <div className="weather-cards">
             <Card
             title={"Temperature"}
